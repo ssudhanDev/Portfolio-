@@ -1,0 +1,21 @@
+.footer {
+  background:rgba(0,0,0,.45); border-top:1px solid rgba(232,184,75,.18);
+  position:relative; z-index:1;
+}
+.footer-inner {
+  max-width:600px; margin:0 auto; padding:50px 7%;
+  text-align:center; display:flex; flex-direction:column; gap:14px; align-items:center;
+}
+.f-logo { font-size:28px; font-weight:800; color:#fff; }
+.f-logo span {
+  background:var(--gradgold); -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent; background-clip:text;
+}
+.f-roles { font-size:13px; color:var(--muted); }
+.f-socials { display:flex; gap:14px; }
+.f-socials a {
+  width:42px; height:42px; border-radius:50%; border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; color:var(--muted); text-decoration:none; transition:all .3s ease;
+}
+.f-copy { font-size:13px; color:var(--muted); }

@@ -1,0 +1,124 @@
+.achievements { background: var(--bg2); }
+
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ach-card {
+  background: linear-gradient(135deg, rgba(4, 25, 50, 0.82), rgba(40, 28, 5, 0.35));
+  border: 1px solid rgba(232, 184, 75, 0.22);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 30px rgba(232, 184, 75, 0.06);
+}
+
+.ach-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradgold);
+}
+
+.ach-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.ach-icon {
+  font-size: 48px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ach-body h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.ach-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 18px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ach-badge.gold {
+  background: var(--gradgold);
+  color: #1a0e00;
+  box-shadow: 0 0 14px rgba(232, 184, 75, 0.4);
+}
+
+.ach-badge.cash {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.4);
+  animation: pulse-cash 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-cash {
+  0%, 100% { box-shadow: 0 0 14px rgba(34, 197, 94, 0.35); }
+  50% { box-shadow: 0 0 28px rgba(34, 197, 94, 0.55); }
+}
+
+.ach-body p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.ach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ach-tags span {
+  background: rgba(232, 184, 75, 0.08);
+  border: 1px solid rgba(232, 184, 75, 0.25);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 13px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+@media (max-width: 580px) {
+  .ach-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .ach-card::before {
+    width: 100%;
+    height: 3px;
+  }
+  .ach-tags { justify-content: center; }
+}
