@@ -58,7 +58,7 @@ export default function PhotographyGallery() {
         </div>
         <div>
           <h3>Hobbies</h3>
-          <p>A hobby I love — 3D animation, motion galleries, and creative media. Drop images in <code>src/assets/photos/</code></p>
+          <p>A hobby I love — 3D animation, motion galleries, and creative media. </p>
         </div>
       </div>
 
