@@ -76,7 +76,7 @@ export default function PhotographyGallery() {
             ))
           ) : (
             <div className="photo-rotator-empty">
-              <span>Add images to <code>src/assets/photos/</code></span>
+              <span>Add images to</span>
             </div>
           )}
         </div>
